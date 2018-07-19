@@ -15,4 +15,3 @@ class Gallery extends React.Component {
 }
 
 window.Gallery = Gallery;
-console.log(module.exports);

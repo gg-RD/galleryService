@@ -908,7 +908,6 @@ var Gallery = function (_React$Component) {
 }(_react2.default.Component);
 
 window.Gallery = Gallery;
-console.log(module.exports);
 
 /***/ }),
 /* 13 */

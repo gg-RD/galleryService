@@ -11,10 +11,17 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // grab promise from db and use result as data
 db.getData().then(function(result){
-	console.log(result);
+	
+	var urlName = result.name;
+	urlName = urlName.replace(/\s/g,'');
+
+	app.get('/'+urlName, function(req, res){
+		// send client side data from db to http://localhost:3003/data
+		res.send(JSON.stringify(result));
+	})
 }).catch(function(err){
 	console.log('there was an error');
-	throw err
+	throw err;
 })
 
 app.listen(port, () => {

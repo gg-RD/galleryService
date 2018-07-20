@@ -6,7 +6,7 @@ var airJordan1 = {
   name: 'Air Jordan 1',
 	colors: [
 	  {
-	    color: 'black',
+	  color: 'black',
 		img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img1.png',
 		img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img2.png',
 		img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img3.png'
@@ -33,6 +33,7 @@ MongoClient.connect(url, {useNewUrlParser: true }, function(err, db) {
   })
 });
 
+// made getData a function that returns a promise (server can now access values in db)
 var getData = () => {
 	return new Promise(function(resolve, reject){
 		MongoClient.connect(url, {useNewUrlParser: true }, function(err, db) {

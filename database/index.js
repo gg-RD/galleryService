@@ -9,13 +9,15 @@ var airJordan1 = {
 	  color: 'black',
 		img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img1.png',
 		img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img2.png',
-		img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img3.png'
+		img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/img3.png',
+		vid: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/AirJordan1/videoTemp.png'
 	  },
 	  {
 		color: 'red',
 		img1: 'fill in',
 		img2: 'fill in',
-		img3: 'fill in'
+		img3: 'fill in',
+		vid: 'fill in'
 	  }
 	]
 }; 

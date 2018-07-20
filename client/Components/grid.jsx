@@ -8,7 +8,7 @@ class Grid extends React.Component{
 
 	render(){
 		return(
-			<div>this is the grid</div>
+			<img src ={this.props.pic} />
 		);
 	}
 }

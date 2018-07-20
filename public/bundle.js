@@ -1585,7 +1585,7 @@ var Gallery = function (_React$Component) {
     key: 'getOriginalData',
     value: function getOriginalData() {
       _axios2.default.get('/AirJordan1').then(function (response) {
-        console.log(JSON.stringify(response));
+        console.log(JSON.stringify(response['data']));
       }).catch(function (error) {
         console.log(error);
       });

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import axios from 'axios';
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -8,11 +8,23 @@ class Gallery extends React.Component {
     this.state = {
       selectedElement: null
     }
+    this.getOriginalData = this.getOriginalData.bind(this);
   }
+
+  getOriginalData() {
+  	axios.get('/AirJordan1').then( (response) => {
+  		console.log(JSON.stringify(response));
+  	}).catch( (error) => {
+  		console.log(error);
+  	})
+  }
+
   render () {
-    return (<p> this should render once stuff is configured correctly </p>);
+    return (
+    	<div>{this.getOriginalData()}</div>
+    );
   }
 }
 
-window.Gallery = Gallery;
-console.log(module.exports);
+
+ReactDOM.render(<Gallery />, document.getElementById('gallery'))

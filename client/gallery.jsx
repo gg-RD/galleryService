@@ -34,15 +34,14 @@ class Gallery extends React.Component {
 
   render () {
     return (
-      <div>
-    	<Div className = 'grid'>
-        <Grid id = "top-left" pic={this.state.images.img1}/>
-        <Grid id = "top-right" pic={this.state.images.vid} />
-      </Div>
-      <Div>
-        <Grid id = "bottom-left" pic={this.state.images.img2} />
-        <Grid id = "bottom-right" pic={this.state.images.img3} />
-      </Div>
+      <div className = 'grid'>
+      	<Div className = 'row1'>
+          <Grid id = "top-left" pic={this.state.images.img1}/>
+        </Div>
+        <Div className = 'row2'>
+          <Grid id = "bottom-left" pic={this.state.images.img2} />
+          <Grid id = "bottom-right" pic={this.state.images.img3} />
+        </Div>
       </div>
 
     );

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-  display: flex,
-  padding: 25px 50px 75px 100px
+  display: flex;
+  height: 300px;
+  width: 300px;
+  align items: center;
 
 `;
 

@@ -14,7 +14,6 @@ db.getData().then(function(result){
 	
 	var urlName = result.name;
 	urlName = urlName.replace(/\s/g,'');
-
 	app.get('/'+urlName, function(req, res){
 		// send client side data from db to http://localhost:3003/data
 		res.send(JSON.stringify(result));

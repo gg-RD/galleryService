@@ -3939,11 +3939,13 @@ var Gallery = function (_React$Component) {
     _this.state = {
       name: null,
       galleryPics: [],
-      images: []
+      images: [],
+      value: 0
     };
     _this.table = [];
 
     _this.getOriginalData = _this.getOriginalData.bind(_this);
+    _this.handleClick = _this.handleClick.bind(_this);
     _this.create_table = _this.create_table.bind(_this);
     return _this;
   }
@@ -3966,12 +3968,24 @@ var Gallery = function (_React$Component) {
       for (var i = 0; i < this.state.images.length; i++) {
         this.table.push(this.state.images[i].img1);
       }
-      console.log(this.table);
     }
+  }, {
+    key: 'handleClick',
+    value: function handleClick() {}
   }, {
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.getOriginalData();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      _axios2.default.get('/flyknit').then(function (response) {
+        //this.setState({galleryPics: response.data.colors[this.state.value]});
+        //console.log(response)
+      }).catch(function (error) {
+        console.log(error);
+      });
     }
   }, {
     key: 'render',
@@ -3994,7 +4008,7 @@ var Gallery = function (_React$Component) {
         _react2.default.createElement(
           _galleryStyle.TablePos,
           { className: 'table', create_table: this.create_table() },
-          _react2.default.createElement(_table2.default, { images: this.table })
+          _react2.default.createElement(_table2.default, { images: this.table, handleClick: this.handleClick, mother: this })
         )
       );
     }
@@ -27232,11 +27246,21 @@ function Table(props) {
 		_react2.default.createElement(
 			'span',
 			null,
-			_react2.default.createElement(Img, { src: props.images[0] }),
-			_react2.default.createElement(Img, { src: props.images[1] }),
-			_react2.default.createElement(Img, { src: props.images[2] }),
-			_react2.default.createElement(Img, { src: props.images[3] }),
-			_react2.default.createElement(Img, { src: props.images[4] })
+			_react2.default.createElement(Img, { src: props.images[0], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[0] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[1], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[1] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[2], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[2] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[3], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[3] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[4], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[4] });
+				} })
 		)
 	);
 }
@@ -27258,7 +27282,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.TablePos = exports.Div = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  flex-direction: column;\n  align items: center;\n\n'], ['\n  display: flex;\n  flex-direction: column;\n  align items: center;\n\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n\tflex-direction: column;\n\tpadding: 100px;\n\tpadding-left: 600px;\n\tposition: absolute;\n'], ['\n\tdisplay: flex;\n\tflex-direction: column;\n\tpadding: 100px;\n\tpadding-left: 600px;\n\tposition: absolute;\n']);
+    _templateObject2 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n\tflex-direction: column;\n\tpadding: 100px;\n\tpadding-left: 550px;\n\tposition: absolute;\n'], ['\n\tdisplay: flex;\n\tflex-direction: column;\n\tpadding: 100px;\n\tpadding-left: 550px;\n\tposition: absolute;\n']);
 
 var _styledComponents = __webpack_require__(7);
 

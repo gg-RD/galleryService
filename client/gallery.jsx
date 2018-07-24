@@ -13,11 +13,13 @@ class Gallery extends React.Component {
     this.state = {
       name: null,
       galleryPics: [],
-      images: []
+      images: [],
+      value: 0
     }
     this.table = [];
 
     this.getOriginalData = this.getOriginalData.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.create_table = this.create_table.bind(this);
   }
 
@@ -34,11 +36,22 @@ class Gallery extends React.Component {
     for(var i = 0 ; i < this.state.images.length; i++){
       this.table.push(this.state.images[i].img1);
     }
-    console.log(this.table);
   }
 
+  handleClick(){
+
+  }
   componentWillMount(){
     this.getOriginalData();
+  }
+
+  componentDidUpdate(){
+    axios.get('/flyknit').then( (response)=> {
+      //this.setState({galleryPics: response.data.colors[this.state.value]});
+      //console.log(response)
+    }).catch( (error) => {
+      console.log(error);
+    })
   }
 
   render () {
@@ -57,7 +70,7 @@ class Gallery extends React.Component {
 
 
       <TablePos className = 'table' create_table = {this.create_table()}>
-        <Table images = {this.table}/>
+        <Table images = {this.table} handleClick = {this.handleClick} mother ={this}/>
       </TablePos>
 
     </Div>

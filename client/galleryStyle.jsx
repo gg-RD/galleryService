@@ -12,6 +12,6 @@ export const TablePos = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 100px;
-	padding-left: 600px;
+	padding-left: 550px;
 	position: absolute;
 `;

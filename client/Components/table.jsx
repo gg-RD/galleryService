@@ -10,6 +10,7 @@ function Table (props) {
 				<Img src={props.images[1]} />
 				<Img src={props.images[2]} />
 				<Img src={props.images[3]} />
+				<Img src={props.images[4]} />
 			</span>
 		</div>
 	);
@@ -18,7 +19,8 @@ function Table (props) {
 
 const Img = styled.img `
 
-	  border-style: solid;
+	  border-style: none;
+	  padding: 2px;
 	  height: 50px;
 	  width: 50px;
 `

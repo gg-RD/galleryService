@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import StyledGrid from './Components/grid.jsx';
+import Grid from './Components/grid.jsx';
 import Table from './Components/table.jsx';
 import styled from 'styled-components';
 
-import { Div } from './galleryStyle.jsx';
+import { Div, TablePos } from './galleryStyle.jsx';
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -43,22 +43,25 @@ class Gallery extends React.Component {
 
   render () {
     return (
-      <div className = 'grid'>
+      <Div className = 'grid'>
 
-      	<Div className = 'row1'>
-          <StyledGrid id = "top-left" pic={this.state.galleryPics.img1} />
-          <StyledGrid id = "top-right" pic= {this.state.galleryPics.img2} />
-        </Div>
-        <Div className = 'row2'>
-          <StyledGrid id = "bottom-left" pic={this.state.galleryPics.img3} />
-          <StyledGrid id = "bottom-right" pic={this.state.galleryPics.img4} />
-        </Div>
+        	<div className = 'row1'>
+            <Grid id = "top-left" pic={this.state.galleryPics.img1} />
+            <Grid id = "top-right" pic= {this.state.galleryPics.img2} />
+          </div>
 
-      <div className = 'table' create_table = {this.create_table()}>
+          <div className = 'row2'>
+            <Grid id = "bottom-left" pic={this.state.galleryPics.img3} />
+            <Grid id = "bottom-right" pic={this.state.galleryPics.img4} />
+          </div>
+
+
+      <TablePos className = 'table' create_table = {this.create_table()}>
         <Table images = {this.table}/>
-      </div>
+      </TablePos>
 
-      </div>
+    </Div>
+
 
     );
   }

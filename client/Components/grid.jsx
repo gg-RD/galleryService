@@ -15,7 +15,8 @@ class Grid extends React.Component{
 }
 
 const Img = styled.img `
-	  border-style: solid;
+	  border-style: none;
+	  padding: 5px;
 	  height: 350px;
 	  width: 250px;
 `

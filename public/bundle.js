@@ -3910,11 +3910,15 @@ var _grid = __webpack_require__(52);
 
 var _grid2 = _interopRequireDefault(_grid);
 
+var _table = __webpack_require__(65);
+
+var _table2 = _interopRequireDefault(_table);
+
 var _styledComponents = __webpack_require__(10);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _galleryStyle = __webpack_require__(65);
+var _galleryStyle = __webpack_require__(66);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3934,12 +3938,13 @@ var Gallery = function (_React$Component) {
 
     _this.state = {
       name: null,
+      galleryPics: [],
       images: []
     };
-    _this.shoe = 'null';
-    _this.image = [];
+    _this.table = [];
 
     _this.getOriginalData = _this.getOriginalData.bind(_this);
+    _this.create_table = _this.create_table.bind(_this);
     return _this;
   }
 
@@ -3950,11 +3955,18 @@ var Gallery = function (_React$Component) {
 
       //need to change based off shoe
       _axios2.default.get('/flyknit').then(function (response) {
-        console.log(response.data.colors[0]);
-        _this2.setState({ name: response.data.name, images: response.data.colors[0] });
+        _this2.setState({ name: response.data.name, galleryPics: response.data.colors[0], images: response.data.colors });
       }).catch(function (error) {
         console.log(error);
       });
+    }
+  }, {
+    key: 'create_table',
+    value: function create_table() {
+      for (var i = 0; i < this.state.images.length; i++) {
+        this.table.push(this.state.images[i].img1);
+      }
+      console.log(this.table);
     }
   }, {
     key: 'componentWillMount',
@@ -3970,14 +3982,19 @@ var Gallery = function (_React$Component) {
         _react2.default.createElement(
           _galleryStyle.Div,
           { className: 'row1' },
-          _react2.default.createElement(_grid2.default, { id: 'top-left', pic: this.state.images.img1 }),
-          _react2.default.createElement(_grid2.default, { id: 'top-right', pic: this.state.images.img2 })
+          _react2.default.createElement(_grid2.default, { id: 'top-left', pic: this.state.galleryPics.img1 }),
+          _react2.default.createElement(_grid2.default, { id: 'top-right', pic: this.state.galleryPics.img2 })
         ),
         _react2.default.createElement(
           _galleryStyle.Div,
           { className: 'row2' },
-          _react2.default.createElement(_grid2.default, { id: 'bottom-left', pic: this.state.images.img3 }),
-          _react2.default.createElement(_grid2.default, { id: 'bottom-right', pic: this.state.images.img4 })
+          _react2.default.createElement(_grid2.default, { id: 'bottom-left', pic: this.state.galleryPics.img3 }),
+          _react2.default.createElement(_grid2.default, { id: 'bottom-right', pic: this.state.galleryPics.img4 })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'table', create_table: this.create_table() },
+          _react2.default.createElement(_table2.default, { images: this.table })
         )
       );
     }
@@ -27184,6 +27201,38 @@ exports.isStrictMode = isStrictMode;
 
 /***/ }),
 /* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Table(props) {
+
+	return _react2.default.createElement(
+		'div',
+		null,
+		_react2.default.createElement(
+			'p',
+			null,
+			props.images.length
+		)
+	);
+}
+
+exports.default = Table;
+
+/***/ }),
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

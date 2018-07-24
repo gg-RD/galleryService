@@ -27210,11 +27210,19 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _templateObject = _taggedTemplateLiteral(['\n\n\t  border-style: solid;\n\t  height: 50px;\n\t  width: 50px;\n'], ['\n\n\t  border-style: solid;\n\t  height: 50px;\n\t  width: 50px;\n']);
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _styledComponents = __webpack_require__(10);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function Table(props) {
 
@@ -27222,12 +27230,17 @@ function Table(props) {
 		'div',
 		null,
 		_react2.default.createElement(
-			'p',
+			'span',
 			null,
-			props.images.length
+			_react2.default.createElement(Img, { src: props.images[0] }),
+			_react2.default.createElement(Img, { src: props.images[1] }),
+			_react2.default.createElement(Img, { src: props.images[2] }),
+			_react2.default.createElement(Img, { src: props.images[3] })
 		)
 	);
 }
+
+var Img = _styledComponents2.default.img(_templateObject);
 
 exports.default = Table;
 

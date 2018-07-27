@@ -26,3 +26,8 @@ const Img = styled.img `
 `
 
 export default Table;
+// in between the span tags --> trying to use loop to create img tab (current code below has bug)
+
+// {props.images.map( (image,index)=> 
+// 					<Img src={image} 
+// 						onClick={ (e)=> props.mother.setState({galleryPics: props.mother.state.images[index]}) } />)}

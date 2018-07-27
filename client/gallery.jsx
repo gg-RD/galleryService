@@ -19,7 +19,6 @@ class Gallery extends React.Component {
     this.table = [];
 
     this.getOriginalData = this.getOriginalData.bind(this);
-    this.handleClick = this.handleClick.bind(this);
     this.create_table = this.create_table.bind(this);
   }
 
@@ -38,20 +37,8 @@ class Gallery extends React.Component {
     }
   }
 
-  handleClick(){
-
-  }
   componentWillMount(){
     this.getOriginalData();
-  }
-
-  componentDidUpdate(){
-    axios.get('/flyknit').then( (response)=> {
-      //this.setState({galleryPics: response.data.colors[this.state.value]});
-      //console.log(response)
-    }).catch( (error) => {
-      console.log(error);
-    })
   }
 
   render () {
@@ -70,7 +57,7 @@ class Gallery extends React.Component {
 
 
       <TablePos className = 'table' create_table = {this.create_table()}>
-        <Table images = {this.table} handleClick = {this.handleClick} mother ={this}/>
+        <Table images = {this.table} mother ={this}/>
       </TablePos>
 
     </Div>
@@ -79,6 +66,5 @@ class Gallery extends React.Component {
     );
   }
 }
-
-
 ReactDOM.render(<Gallery />, document.getElementById('gallery'))
+export default Gallery;

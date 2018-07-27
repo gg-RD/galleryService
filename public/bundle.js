@@ -3892,6 +3892,10 @@ module.exports = Cancel;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(2);
@@ -3945,7 +3949,6 @@ var Gallery = function (_React$Component) {
     _this.table = [];
 
     _this.getOriginalData = _this.getOriginalData.bind(_this);
-    _this.handleClick = _this.handleClick.bind(_this);
     _this.create_table = _this.create_table.bind(_this);
     return _this;
   }
@@ -3970,22 +3973,9 @@ var Gallery = function (_React$Component) {
       }
     }
   }, {
-    key: 'handleClick',
-    value: function handleClick() {}
-  }, {
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.getOriginalData();
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      _axios2.default.get('/flyknit').then(function (response) {
-        //this.setState({galleryPics: response.data.colors[this.state.value]});
-        //console.log(response)
-      }).catch(function (error) {
-        console.log(error);
-      });
     }
   }, {
     key: 'render',
@@ -4008,7 +3998,7 @@ var Gallery = function (_React$Component) {
         _react2.default.createElement(
           _galleryStyle.TablePos,
           { className: 'table', create_table: this.create_table() },
-          _react2.default.createElement(_table2.default, { images: this.table, handleClick: this.handleClick, mother: this })
+          _react2.default.createElement(_table2.default, { images: this.table, mother: this })
         )
       );
     }
@@ -4018,6 +4008,7 @@ var Gallery = function (_React$Component) {
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(Gallery, null), document.getElementById('gallery'));
+exports.default = Gallery;
 
 /***/ }),
 /* 23 */
@@ -27268,6 +27259,11 @@ function Table(props) {
 var Img = _styledComponents2.default.img(_templateObject);
 
 exports.default = Table;
+// in between the span tags --> trying to use loop to create img tab (current code below has bug)
+
+// {props.images.map( (image,index)=> 
+// 					<Img src={image} 
+// 						onClick={ (e)=> props.mother.setState({galleryPics: props.mother.state.images[index]}) } />)}
 
 /***/ }),
 /* 66 */

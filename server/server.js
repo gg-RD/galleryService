@@ -10,12 +10,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Getting info from db
 
 // grab promise from db and use result as data
-db.getData().then(function(result){
-	
+db.getData.then( (result) => {
 	var urlName = result.name;
 	urlName = urlName.replace(/\s/g,'');
 	app.get('/'+urlName, function(req, res){
-		// send client side data from db to http://localhost:3003/data
+		// send client side data from db to http://localhost:3003/flyknit
 		res.send(JSON.stringify(result));
 	})
 }).catch(function(err){

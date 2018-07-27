@@ -3892,6 +3892,10 @@ module.exports = Cancel;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(2);
@@ -3909,6 +3913,10 @@ var _axios2 = _interopRequireDefault(_axios);
 var _grid = __webpack_require__(52);
 
 var _grid2 = _interopRequireDefault(_grid);
+
+var _table = __webpack_require__(65);
+
+var _table2 = _interopRequireDefault(_table);
 
 var _styledComponents = __webpack_require__(7);
 
@@ -3934,12 +3942,14 @@ var Gallery = function (_React$Component) {
 
     _this.state = {
       name: null,
-      images: []
+      galleryPics: [],
+      images: [],
+      value: 0
     };
-    _this.shoe = 'null';
-    _this.image = [];
+    _this.table = [];
 
     _this.getOriginalData = _this.getOriginalData.bind(_this);
+    _this.create_table = _this.create_table.bind(_this);
     return _this;
   }
 
@@ -3950,11 +3960,17 @@ var Gallery = function (_React$Component) {
 
       //need to change based off shoe
       _axios2.default.get('/flyknit').then(function (response) {
-        console.log(response.data.colors[0]);
-        _this2.setState({ name: response.data.name, images: response.data.colors[0] });
+        _this2.setState({ name: response.data.name, galleryPics: response.data.colors[0], images: response.data.colors });
       }).catch(function (error) {
         console.log(error);
       });
+    }
+  }, {
+    key: 'create_table',
+    value: function create_table() {
+      for (var i = 0; i < this.state.images.length; i++) {
+        this.table.push(this.state.images[i].img1);
+      }
     }
   }, {
     key: 'componentWillMount',
@@ -3965,19 +3981,24 @@ var Gallery = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        _galleryStyle.Div,
         { className: 'grid' },
         _react2.default.createElement(
-          _galleryStyle.Div,
+          'div',
           { className: 'row1' },
-          _react2.default.createElement(_grid2.default, { id: 'top-left', pic: this.state.images.img1 }),
-          _react2.default.createElement(_grid2.default, { id: 'top-right', pic: this.state.images.img2 })
+          _react2.default.createElement(_grid2.default, { id: 'top-left', pic: this.state.galleryPics.img1 }),
+          _react2.default.createElement(_grid2.default, { id: 'top-right', pic: this.state.galleryPics.img2 })
         ),
         _react2.default.createElement(
-          _galleryStyle.Div,
+          'div',
           { className: 'row2' },
-          _react2.default.createElement(_grid2.default, { id: 'bottom-left', pic: this.state.images.img3 }),
-          _react2.default.createElement(_grid2.default, { id: 'bottom-right', pic: this.state.images.img4 })
+          _react2.default.createElement(_grid2.default, { id: 'bottom-left', pic: this.state.galleryPics.img3 }),
+          _react2.default.createElement(_grid2.default, { id: 'bottom-right', pic: this.state.galleryPics.img4 })
+        ),
+        _react2.default.createElement(
+          _galleryStyle.TablePos,
+          { className: 'table', create_table: this.create_table() },
+          _react2.default.createElement(_table2.default, { images: this.table, mother: this })
         )
       );
     }
@@ -3987,6 +4008,7 @@ var Gallery = function (_React$Component) {
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(Gallery, null), document.getElementById('gallery'));
+exports.default = Gallery;
 
 /***/ }),
 /* 23 */
@@ -24349,7 +24371,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n\t  border-style: solid;\n\t  height: 350px;\n\t  width: 250px;\n'], ['\n\t  border-style: solid;\n\t  height: 350px;\n\t  width: 250px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n\t  border-style: none;\n\t  padding: 5px;\n\t  height: 350px;\n\t  width: 250px;\n'], ['\n\t  border-style: none;\n\t  padding: 5px;\n\t  height: 350px;\n\t  width: 250px;\n']);
 
 var _react = __webpack_require__(2);
 
@@ -27183,7 +27205,67 @@ exports.isStrictMode = isStrictMode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 65 */,
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n\n\t  border-style: none;\n\t  padding: 2px;\n\t  height: 50px;\n\t  width: 50px;\n'], ['\n\n\t  border-style: none;\n\t  padding: 2px;\n\t  height: 50px;\n\t  width: 50px;\n']);
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(7);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function Table(props) {
+
+	return _react2.default.createElement(
+		'div',
+		null,
+		_react2.default.createElement(
+			'span',
+			null,
+			_react2.default.createElement(Img, { src: props.images[0], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[0] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[1], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[1] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[2], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[2] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[3], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[3] });
+				} }),
+			_react2.default.createElement(Img, { src: props.images[4], onClick: function onClick(e) {
+					return props.mother.setState({ galleryPics: props.mother.state.images[4] });
+				} })
+		)
+	);
+}
+
+var Img = _styledComponents2.default.img(_templateObject);
+
+exports.default = Table;
+// in between the span tags --> trying to use loop to create img tab (current code below has bug)
+
+// {props.images.map( (image,index)=> 
+// 					<Img src={image} 
+// 						onClick={ (e)=> props.mother.setState({galleryPics: props.mother.state.images[index]}) } />)}
+
+/***/ }),
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27191,11 +27273,12 @@ exports.isStrictMode = isStrictMode;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
-exports.Div = undefined;
+exports.TablePos = exports.Div = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  align items: center;\n\n'], ['\n  display: flex;\n  align items: center;\n\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  flex-direction: column;\n  align items: center;\n\n'], ['\n  display: flex;\n  flex-direction: column;\n  align items: center;\n\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n\tflex-direction: column;\n\tpadding: 100px;\n\tpadding-left: 550px;\n\tposition: absolute;\n'], ['\n\tdisplay: flex;\n\tflex-direction: column;\n\tpadding: 100px;\n\tpadding-left: 550px;\n\tposition: absolute;\n']);
 
 var _styledComponents = __webpack_require__(7);
 
@@ -27206,6 +27289,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var Div = exports.Div = _styledComponents2.default.div(_templateObject);
+
+var TablePos = exports.TablePos = _styledComponents2.default.div(_templateObject2);
 
 /***/ })
 /******/ ]);

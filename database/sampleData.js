@@ -1,6 +1,11 @@
-var samepleData = [
+/*
+  scroll all the way to bottom to see the flyknit data. flyknit data is the data used 
+  on client-side
+*/
+
+var sampleData = [
 {
-  "id": 1,
+  "_id": 1,
   "name": "Opela",
   "colors": [
     {
@@ -40,7 +45,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 2,
+  "_id": 2,
   "name": "Lotstring",
   "colors": [
     {
@@ -80,7 +85,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 3,
+  "_id": 3,
   "name": "Opela",
   "colors": [
     {
@@ -120,7 +125,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 4,
+  "_id": 4,
   "name": "Tin",
   "colors": [
     {
@@ -160,7 +165,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 5,
+  "_id": 5,
   "name": "Alpha",
   "colors": [
     {
@@ -200,7 +205,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 6,
+  "_id": 6,
   "name": "Zoolab",
   "colors": [
     {
@@ -240,7 +245,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 7,
+  "_id": 7,
   "name": "Aerified",
   "colors": [
     {
@@ -280,7 +285,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 8,
+  "_id": 8,
   "name": "Matsoft",
   "colors": [
     {
@@ -320,7 +325,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 9,
+  "_id": 9,
   "name": "Zontrax",
   "colors": [
     {
@@ -360,7 +365,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 10,
+  "_id": 10,
   "name": "Voltsillam",
   "colors": [
     {
@@ -400,7 +405,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 11,
+  "_id": 11,
   "name": "Toughjoyfax",
   "colors": [
     {
@@ -440,7 +445,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 12,
+  "_id": 12,
   "name": "Duobam",
   "colors": [
     {
@@ -480,7 +485,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 13,
+  "_id": 13,
   "name": "Tin",
   "colors": [
     {
@@ -520,7 +525,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 14,
+  "_id": 14,
   "name": "Treeflex",
   "colors": [
     {
@@ -560,7 +565,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 15,
+  "_id": 15,
   "name": "Fix San",
   "colors": [
     {
@@ -600,7 +605,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 16,
+  "_id": 16,
   "name": "Keylex",
   "colors": [
     {
@@ -640,7 +645,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 17,
+  "_id": 17,
   "name": "Prodder",
   "colors": [
     {
@@ -680,7 +685,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 18,
+  "_id": 18,
   "name": "Zontrax",
   "colors": [
     {
@@ -720,7 +725,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 19,
+  "_id": 19,
   "name": "Tempsoft",
   "colors": [
     {
@@ -760,7 +765,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 20,
+  "_id": 20,
   "name": "Matsoft",
   "colors": [
     {
@@ -800,7 +805,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 21,
+  "_id": 21,
   "name": "Cardify",
   "colors": [
     {
@@ -840,7 +845,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 22,
+  "_id": 22,
   "name": "Temp",
   "colors": [
     {
@@ -880,7 +885,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 23,
+  "_id": 23,
   "name": "Mat Lam Tam",
   "colors": [
     {
@@ -920,7 +925,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 24,
+  "_id": 24,
   "name": "Flowdesk",
   "colors": [
     {
@@ -960,7 +965,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 25,
+  "_id": 25,
   "name": "Lotstring",
   "colors": [
     {
@@ -1000,7 +1005,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 26,
+  "_id": 26,
   "name": "It",
   "colors": [
     {
@@ -1040,7 +1045,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 27,
+  "_id": 27,
   "name": "Sonsing",
   "colors": [
     {
@@ -1080,7 +1085,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 28,
+  "_id": 28,
   "name": "Zontrax",
   "colors": [
     {
@@ -1120,7 +1125,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 29,
+  "_id": 29,
   "name": "Biodex",
   "colors": [
     {
@@ -1160,7 +1165,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 30,
+  "_id": 30,
   "name": "Stim",
   "colors": [
     {
@@ -1200,7 +1205,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 31,
+  "_id": 31,
   "name": "Keylex",
   "colors": [
     {
@@ -1240,7 +1245,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 32,
+  "_id": 32,
   "name": "Alphazap",
   "colors": [
     {
@@ -1280,7 +1285,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 33,
+  "_id": 33,
   "name": "Alpha",
   "colors": [
     {
@@ -1320,7 +1325,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 34,
+  "_id": 34,
   "name": "Otcom",
   "colors": [
     {
@@ -1360,7 +1365,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 35,
+  "_id": 35,
   "name": "Sonsing",
   "colors": [
     {
@@ -1400,7 +1405,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 36,
+  "_id": 36,
   "name": "Tin",
   "colors": [
     {
@@ -1440,7 +1445,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 37,
+  "_id": 37,
   "name": "Matsoft",
   "colors": [
     {
@@ -1480,7 +1485,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 38,
+  "_id": 38,
   "name": "Mat Lam Tam",
   "colors": [
     {
@@ -1520,7 +1525,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 39,
+  "_id": 39,
   "name": "Alpha",
   "colors": [
     {
@@ -1560,7 +1565,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 40,
+  "_id": 40,
   "name": "Zaam-Dox",
   "colors": [
     {
@@ -1600,7 +1605,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 41,
+  "_id": 41,
   "name": "Aerified",
   "colors": [
     {
@@ -1640,7 +1645,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 42,
+  "_id": 42,
   "name": "Matsoft",
   "colors": [
     {
@@ -1680,7 +1685,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 43,
+  "_id": 43,
   "name": "Prodder",
   "colors": [
     {
@@ -1720,7 +1725,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 44,
+  "_id": 44,
   "name": "Overhold",
   "colors": [
     {
@@ -1760,7 +1765,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 45,
+  "_id": 45,
   "name": "Duobam",
   "colors": [
     {
@@ -1800,7 +1805,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 46,
+  "_id": 46,
   "name": "Konklux",
   "colors": [
     {
@@ -1840,7 +1845,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 47,
+  "_id": 47,
   "name": "Biodex",
   "colors": [
     {
@@ -1880,7 +1885,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 48,
+  "_id": 48,
   "name": "Zoolab",
   "colors": [
     {
@@ -1920,7 +1925,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 49,
+  "_id": 49,
   "name": "Cookley",
   "colors": [
     {
@@ -1960,7 +1965,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 50,
+  "_id": 50,
   "name": "Flexidy",
   "colors": [
     {
@@ -2000,7 +2005,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 51,
+  "_id": 51,
   "name": "Subin",
   "colors": [
     {
@@ -2040,7 +2045,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 52,
+  "_id": 52,
   "name": "Veribet",
   "colors": [
     {
@@ -2080,7 +2085,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 53,
+  "_id": 53,
   "name": "It",
   "colors": [
     {
@@ -2120,7 +2125,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 54,
+  "_id": 54,
   "name": "Flowdesk",
   "colors": [
     {
@@ -2160,7 +2165,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 55,
+  "_id": 55,
   "name": "Keylex",
   "colors": [
     {
@@ -2200,7 +2205,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 56,
+  "_id": 56,
   "name": "Lotlux",
   "colors": [
     {
@@ -2240,7 +2245,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 57,
+  "_id": 57,
   "name": "Duobam",
   "colors": [
     {
@@ -2280,7 +2285,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 58,
+  "_id": 58,
   "name": "Veribet",
   "colors": [
     {
@@ -2320,7 +2325,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 59,
+  "_id": 59,
   "name": "Hatity",
   "colors": [
     {
@@ -2360,7 +2365,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 60,
+  "_id": 60,
   "name": "Cardify",
   "colors": [
     {
@@ -2400,7 +2405,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 61,
+  "_id": 61,
   "name": "Tresom",
   "colors": [
     {
@@ -2440,7 +2445,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 62,
+  "_id": 62,
   "name": "Stronghold",
   "colors": [
     {
@@ -2480,7 +2485,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 63,
+  "_id": 63,
   "name": "Gembucket",
   "colors": [
     {
@@ -2520,7 +2525,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 64,
+  "_id": 64,
   "name": "Prodder",
   "colors": [
     {
@@ -2560,7 +2565,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 65,
+  "_id": 65,
   "name": "Ronstring",
   "colors": [
     {
@@ -2600,7 +2605,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 66,
+  "_id": 66,
   "name": "Andalax",
   "colors": [
     {
@@ -2640,7 +2645,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 67,
+  "_id": 67,
   "name": "Duobam",
   "colors": [
     {
@@ -2680,7 +2685,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 68,
+  "_id": 68,
   "name": "Cardify",
   "colors": [
     {
@@ -2720,7 +2725,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 69,
+  "_id": 69,
   "name": "Trippledex",
   "colors": [
     {
@@ -2760,7 +2765,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 70,
+  "_id": 70,
   "name": "Vagram",
   "colors": [
     {
@@ -2800,7 +2805,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 71,
+  "_id": 71,
   "name": "Asoka",
   "colors": [
     {
@@ -2840,7 +2845,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 72,
+  "_id": 72,
   "name": "Duobam",
   "colors": [
     {
@@ -2880,7 +2885,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 73,
+  "_id": 73,
   "name": "Fix San",
   "colors": [
     {
@@ -2920,7 +2925,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 74,
+  "_id": 74,
   "name": "Stringtough",
   "colors": [
     {
@@ -2960,7 +2965,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 75,
+  "_id": 75,
   "name": "Stronghold",
   "colors": [
     {
@@ -3000,7 +3005,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 76,
+  "_id": 76,
   "name": "Y-find",
   "colors": [
     {
@@ -3040,7 +3045,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 77,
+  "_id": 77,
   "name": "Kanlam",
   "colors": [
     {
@@ -3080,7 +3085,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 78,
+  "_id": 78,
   "name": "Alphazap",
   "colors": [
     {
@@ -3120,7 +3125,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 79,
+  "_id": 79,
   "name": "Solarbreeze",
   "colors": [
     {
@@ -3160,7 +3165,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 80,
+  "_id": 80,
   "name": "Transcof",
   "colors": [
     {
@@ -3200,7 +3205,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 81,
+  "_id": 81,
   "name": "Zathin",
   "colors": [
     {
@@ -3240,7 +3245,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 82,
+  "_id": 82,
   "name": "Stronghold",
   "colors": [
     {
@@ -3280,7 +3285,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 83,
+  "_id": 83,
   "name": "Treeflex",
   "colors": [
     {
@@ -3320,7 +3325,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 84,
+  "_id": 84,
   "name": "Greenlam",
   "colors": [
     {
@@ -3360,7 +3365,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 85,
+  "_id": 85,
   "name": "Daltfresh",
   "colors": [
     {
@@ -3400,7 +3405,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 86,
+  "_id": 86,
   "name": "Aerified",
   "colors": [
     {
@@ -3440,7 +3445,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 87,
+  "_id": 87,
   "name": "Prodder",
   "colors": [
     {
@@ -3480,7 +3485,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 88,
+  "_id": 88,
   "name": "Tampflex",
   "colors": [
     {
@@ -3520,7 +3525,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 89,
+  "_id": 89,
   "name": "Span",
   "colors": [
     {
@@ -3560,7 +3565,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 90,
+  "_id": 90,
   "name": "Voltsillam",
   "colors": [
     {
@@ -3600,7 +3605,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 91,
+  "_id": 91,
   "name": "Bigtax",
   "colors": [
     {
@@ -3640,7 +3645,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 92,
+  "_id": 92,
   "name": "Toughjoyfax",
   "colors": [
     {
@@ -3680,7 +3685,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 93,
+  "_id": 93,
   "name": "Cardify",
   "colors": [
     {
@@ -3720,7 +3725,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 94,
+  "_id": 94,
   "name": "Transcof",
   "colors": [
     {
@@ -3760,7 +3765,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 95,
+  "_id": 95,
   "name": "Tin",
   "colors": [
     {
@@ -3800,7 +3805,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 96,
+  "_id": 96,
   "name": "Namfix",
   "colors": [
     {
@@ -3840,7 +3845,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 97,
+  "_id": 97,
   "name": "Konklab",
   "colors": [
     {
@@ -3880,7 +3885,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 98,
+  "_id": 98,
   "name": "Zoolab",
   "colors": [
     {
@@ -3920,7 +3925,7 @@ var samepleData = [
     }
   ]
 }, {
-  "id": 99,
+  "_id": 99,
   "name": "Tres-Zap",
   "colors": [
     {
@@ -3961,4 +3966,48 @@ var samepleData = [
   ]
 }]
 
-module.exports = samepleData;
+// fake data 
+var flyknit = {
+  _id: 0,
+  name: 'flyknit',
+  colors: [
+    {
+      color: 'black',
+      img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/black/img1.png',
+      img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/black/img2.png',
+      img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/black/img3.png',
+      img4: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/black/img4.png'
+    },
+    {
+    color: 'blue',
+    img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/blue/img1.png',
+    img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/blue/img2.png',
+    img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/blue/img3.png',
+    img4: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/blue/img4.png'
+    },
+    {
+      color: 'brown',
+      img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/brown/img1.png',
+      img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/brown/img2.png',
+      img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/brown/img3.png',
+      img4: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/brown/img4.png'
+    },
+    {
+      color: 'red-white',
+      img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/red-white/img1.png',
+      img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/red-white/img2.png',
+      img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/red-white/img3.png',
+      img4: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/red-white/img4.jpg'
+    },
+    {
+      color: 'white',
+      img1: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/white/img1.png',
+      img2: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/white/img2.png',
+      img3: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/white/img3.png',
+      img4: 'https://s3-us-west-1.amazonaws.com/hrsf98-fec/flyknit/white/img4.jpg'
+    }
+  ]
+}; 
+
+sampleData.unshift(flyknit);
+module.exports = sampleData;

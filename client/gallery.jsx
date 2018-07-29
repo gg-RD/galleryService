@@ -28,7 +28,8 @@ class Gallery extends React.Component {
       this.setState({name: response.data.name, galleryPics: response.data.colors[0], images: response.data.colors})
   	}).catch( (error) => {
   		console.log(error);
-  	})
+  	});
+
   }
 
   create_table() {
@@ -57,7 +58,7 @@ class Gallery extends React.Component {
 
 
       <TablePos className = 'table' create_table = {this.create_table()}>
-        <Table images = {this.table} mother ={this}/>
+        <Table className = 'tableComp' images = {this.table} mother ={this}/>
       </TablePos>
 
     </Div>
@@ -66,5 +67,5 @@ class Gallery extends React.Component {
     );
   }
 }
-ReactDOM.render(<Gallery />, document.getElementById('gallery'))
+
 export default Gallery;

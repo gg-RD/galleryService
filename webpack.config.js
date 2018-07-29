@@ -1,10 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 
-// look into absolute paths
 module.exports = {
   context: __dirname + '/client',
-  entry: './gallery.jsx',
+  entry: './index.jsx',
   output: {
     filename: 'bundle.js',
     path: __dirname + '/public',

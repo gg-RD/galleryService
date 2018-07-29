@@ -66,5 +66,5 @@ class Gallery extends React.Component {
     );
   }
 }
-ReactDOM.render(<Gallery />, document.getElementById('gallery'))
+
 export default Gallery;

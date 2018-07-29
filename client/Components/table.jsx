@@ -4,7 +4,8 @@ import styled from 'styled-components';
 function Table (props) {
 
 	return (
-		<div>
+		<div>	
+		{console.log(props.mother)}
 			<span> 
 				<Img src={props.images[0]} onClick= { (e)=> props.mother.setState({galleryPics: props.mother.state.images[0]}) }/>
 				<Img src={props.images[1]} onClick= { (e)=> props.mother.setState({galleryPics: props.mother.state.images[1]}) }/>

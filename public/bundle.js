@@ -26277,7 +26277,7 @@ var Gallery = function (_React$Component) {
         _react2.default.createElement(
           _galleryStyle.TablePos,
           { className: 'table', create_table: this.create_table() },
-          _react2.default.createElement(_table2.default, { images: this.table, mother: this })
+          _react2.default.createElement(_table2.default, { className: 'tableComp', images: this.table, mother: this })
         )
       );
     }
@@ -27260,11 +27260,10 @@ function Table(props) {
 	return _react2.default.createElement(
 		'div',
 		null,
-		console.log(props.mother),
 		_react2.default.createElement(
 			'span',
 			null,
-			_react2.default.createElement(Img, { src: props.images[0], onClick: function onClick(e) {
+			_react2.default.createElement(Img, { className: 'tablePos0', src: props.images[0], onClick: function onClick(e) {
 					return props.mother.setState({ galleryPics: props.mother.state.images[0] });
 				} }),
 			_react2.default.createElement(Img, { src: props.images[1], onClick: function onClick(e) {

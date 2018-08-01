@@ -1,37 +1,33 @@
 import React from 'react';
 
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
 import Grid from './Components/grid'
 import Gallery from './gallery'
+import Table from './Components/table'
+
 
 describe('Gallery Component', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(<Gallery />);
-
+  });
+  //check if Gallery is a component by giving it prop
+  it('allows us to set props', () => {
+    const wrapper = mount(<Gallery bar="baz" />);
+    expect(wrapper.props().bar).toEqual('baz');
+    wrapper.setProps({ bar: 'foo' });
+    expect(wrapper.props().bar).toEqual('foo');
   });
 
-  // it('allows us to set props', () => {
-  //   const wrapper = mount(<Foo bar="baz" />);
-  //   expect(wrapper.props().bar).to.equal('baz');
-  //   wrapper.setProps({ bar: 'foo' });
-  //   expect(wrapper.props().bar).to.equal('foo');
-  // });
+  it('has child component', () => {
+    const wrapper = mount(<Gallery />);
+    const table = wrapper.find(Table).find('#secondImg');
+    table.simulate('click')
+    console.log(wrapper.state());
+    //console.log(wrapper.state())
+  });
 
-  // it('simulates click events', () => {
-  //   const onButtonClick = sinon.spy();
-  //   const wrapper = mount((
-  //     <Foo onButtonClick={onButtonClick} />
-  //   ));
-  //   wrapper.find('button').simulate('click');
-  //   expect(onButtonClick.calledOnce).to.equal(true);
-  // });
 });
 
-// describe('Grid Component', () => {
-// 	it('Grid Component should render as expected', () => {
-// 		const wrapper = shallow(<Grid />)
-// 		expect(wrapper).toMatchSnapshot();
-// 	})
-// })
+

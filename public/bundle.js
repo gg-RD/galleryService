@@ -26226,7 +26226,7 @@ var Gallery = function (_React$Component) {
       value: 0
     };
     _this.table = [];
-
+    _this.componentWillMount = _this.componentWillMount.bind(_this);
     _this.getOriginalData = _this.getOriginalData.bind(_this);
     _this.create_table = _this.create_table.bind(_this);
     return _this;
@@ -26277,7 +26277,7 @@ var Gallery = function (_React$Component) {
         _react2.default.createElement(
           _galleryStyle.TablePos,
           { className: 'table', create_table: this.create_table() },
-          _react2.default.createElement(_table2.default, { className: 'tableComp', images: this.table, mother: this })
+          _react2.default.createElement(_table2.default, { className: 'tableComp', images: this.table, mother: this, onClick: console.log(this.state.galleryPics) })
         )
       );
     }
@@ -27181,8 +27181,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _templateObject = _taggedTemplateLiteral(['\n\t  border-style: none;\n\t  padding: 5px;\n\t  height: 350px;\n\t  width: 250px;\n'], ['\n\t  border-style: none;\n\t  padding: 5px;\n\t  height: 350px;\n\t  width: 250px;\n']);
 
 var _react = __webpack_require__(2);
@@ -27201,30 +27199,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Grid = function (_React$Component) {
-	_inherits(Grid, _React$Component);
-
-	function Grid(props) {
-		_classCallCheck(this, Grid);
-
-		return _possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).call(this, props));
-	}
-
-	_createClass(Grid, [{
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(Img, { src: this.props.pic });
-		}
-	}]);
-
-	return Grid;
-}(_react2.default.Component);
+function Grid(props) {
+	return _react2.default.createElement(Img, { src: props.pic });
+}
 
 var Img = _styledComponents2.default.img(_templateObject);
 
@@ -27263,7 +27240,7 @@ function Table(props) {
 		_react2.default.createElement(
 			'span',
 			null,
-			_react2.default.createElement(Img, { className: 'tablePos0', src: props.images[0], onClick: function onClick(e) {
+			_react2.default.createElement(Img, { src: props.images[0], onClick: function onClick(e) {
 					return props.mother.setState({ galleryPics: props.mother.state.images[0] });
 				} }),
 			_react2.default.createElement(Img, { src: props.images[1], onClick: function onClick(e) {

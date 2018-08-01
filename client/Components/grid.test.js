@@ -12,14 +12,11 @@ export const Img = styled.img `
 	  width: 250px;
 `
 
-// test('it works', () => {
-//   const tree = renderer.create(<Img />).toJSON()
-//   expect(tree).toMatchSnapshot()
-// })
 
 describe('Grid Component', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(<Grid />);
-
   });
+
+  it()
 });

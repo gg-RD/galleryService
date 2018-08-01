@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
+    "cov": "jest --coverage",
     "build": "webpack --watch",
     "start": "nodemon ./server/server.js"
   },

@@ -17,7 +17,7 @@ class Gallery extends React.Component {
       value: 0
     }
     this.table = [];
-
+    this.componentWillMount = this.componentWillMount.bind(this);
     this.getOriginalData = this.getOriginalData.bind(this);
     this.create_table = this.create_table.bind(this);
   }
@@ -57,8 +57,8 @@ class Gallery extends React.Component {
           </div>
 
 
-      <TablePos className = 'table' create_table = {this.create_table()}>
-        <Table className = 'tableComp' images = {this.table} mother ={this}/>
+      <TablePos className = 'table' create_table = {this.create_table()} >
+        <Table className = 'tableComp' images = {this.table} mother ={this} onClick={console.log(this.state.galleryPics)} />
       </TablePos>
 
     </Div>

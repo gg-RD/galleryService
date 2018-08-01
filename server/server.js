@@ -9,9 +9,8 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public')));
 
 // grab promise from db and use result as data
-console.log(db.getData);
-
 db.getData.then( (result) => {
+	//console.log(result)
 	var urlName = result.name;
 	urlName = urlName.replace(/\s/g,'');
 	app.get('/'+urlName, function(req, res){

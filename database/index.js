@@ -5,6 +5,7 @@ var sampleData = require('./sampleData.js');
 
 
 //insert fake data in shoe db in mongo
+// promise now updataed
 var dbSetup = new Promise(function(resolve,reject){
 	MongoClient.connect(url, {useNewUrlParser: true }, function(err, db) {
 	  if (err) throw err;

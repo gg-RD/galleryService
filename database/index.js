@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/shoes";
+var url = "mongodb://database:27017/shoes";
 var sampleData = require('./sampleData.js');
 
 
@@ -11,8 +11,8 @@ var dbSetup = new Promise(function(resolve,reject){
 	  if (err) throw err;
 	  var shoesDb = db.db('shoes');
 	  
-	  shoesDb.dropCollection("shoes", function(err, delOK) {
-		if (err) throw err;
+	 // shoesDb.dropCollection("shoes", function(err, delOK) {
+		//if (err) throw err;
 		shoesDb.collection("shoes").insertMany(sampleData , (err, res) => {
 
 		  	if(err) throw err;
@@ -20,7 +20,7 @@ var dbSetup = new Promise(function(resolve,reject){
 			db.close();
 		  })
 	  });
-	});
+	//});
 })
 
 
